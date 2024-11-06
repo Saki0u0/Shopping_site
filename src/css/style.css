@@ -1,0 +1,478 @@
+/* YOUR CSS HERE */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html,body{
+  height:100%;
+  margin:0;
+}
+
+body{
+  font-family: "Cormorant Garamond", serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  margin-top: 100px;
+}
+
+.content{
+  display: flex;
+  /* margin-top: 100px; */
+}
+
+img{
+  width:200px;
+}
+
+li {
+  list-style: none;
+}
+
+button{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+button:hover {
+	color: black;
+	background: #fff;
+  border:solid 1px black;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  position:fixed;
+  padding-top:10px;
+}
+
+aside{
+  margin-top: 400px;
+}
+
+.logo{
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.right-side{
+  margin-right:70px;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.right-side p{
+  margin-top:0;
+}
+
+.icon{
+  width: 30px;
+  margin-left: 30px;
+  margin-right:10px;
+  cursor: pointer;
+  height: 25px;
+}
+
+
+.main{
+  height:400px;
+  width: 50%;
+  flex:1;
+}
+
+.favorite{
+  width:30px;
+  cursor: pointer;
+}
+
+.favorite-liked{
+  width:30px;
+  cursor: pointer;
+}
+
+.off{
+  display:none;
+}
+
+.product-list{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  margin-left:100px;
+  margin-right:100px;
+}
+
+.product-list-open{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100vw;
+  flex-wrap: nowrap;
+  margin-right: 0;
+  margin-left:0;
+  margin-bottom: 450px;
+}
+
+.product-item {
+  width: calc(20% - 10px); 
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.product-item .image img {
+  width: 150px; 
+  object-fit: contain;
+  height: auto; 
+  max-height: 100%
+}
+
+.details{
+  display:none;
+  width: 100vw;
+}
+
+.on{
+  display: block;
+  position:absolute;
+  left:0;
+  margin-top: 100px;
+}
+
+.detail{
+  display:flex;
+  justify-content: center;
+  margin-bottom:100px;
+}
+
+.detail-image{
+  width: 300px; 
+}
+
+.product-description{
+  width:50%;
+  margin-left:50px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.price{
+  font-size: 1.5rem;
+}
+.none{
+  display:none;
+}
+
+.image{
+  cursor: pointer;
+  padding: 16px;
+  transition: transform 0.3s ease; 
+  height: 150px; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.image:hover{
+  transform: scale(1.3);
+}
+
+.sidebar{
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar.open-menu{
+  position: fixed;
+  right:0;
+  width: 500px;
+  height: 96vh;
+  background-color: 	white;
+  border:1px solid lightgray;
+  overflow-y: scroll;
+  margin-top:40px
+}
+
+.aside-title h3{
+  margin-left:10px;
+}
+
+.aside-title{
+  display: flex;
+}
+
+.cart{
+  display: flex;
+  margin-top: 15px;
+}
+
+.add-to-cart{
+  width: 30px;
+  margin-right: 10px;
+  margin-left:30px;
+}
+
+.aside-icon{
+  width:20px;
+}
+
+.cart-list, .favorite-list{
+  margin-left:50px;
+  margin-top: 20px;
+}
+
+.cart-list ul, .favorite-list ul{
+  padding-left: 0px;
+ }
+
+.cart-list li, .favorite-list li{
+ display: flex;
+ padding-left: 0px;
+ margin-top: 30px;
+}
+
+.item-title{
+  font-size: 1.5rem;
+}
+
+.item-price{
+  margin-bottom: 10px;
+}
+
+.close{
+  margin:10px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.cart-item{
+  margin-left:20px;
+}
+
+.cart-item p{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.cart-image img{
+  width: 100px;
+  height: 150px;
+}
+
+.total-price{
+  font-size: 1.5rem;
+}
+
+.check-out{
+  margin-top: 10px;
+  padding:10px 20px;
+}
+
+.controls{
+  display: flex;
+  margin-top: 20px;
+}
+
+.quantity-controls{
+  border: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  margin-right:10px;
+  align-items: center;
+  width: 100px;
+  height: 30px; 
+}
+
+.decrement-btn,.increment-btn,.quantity{
+ text-align: center;
+ height: 30px; 
+}
+
+.quantity{
+  background-color: white;
+  width: 33px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;  
+  line-height: 40px;
+}
+
+footer{
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 100px;
+  display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  header{
+    margin-top:20px;
+  }
+
+  header p{
+  display:none;
+  }
+
+  .product-item {
+    width: calc(40%); 
+    cursor: pointer;
+  }
+
+  .icon {
+    margin-left:0px;
+  }
+
+  .product-list{
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  .product-list-open{
+    width:90vw;
+  }
+
+  .detail{
+    flex-direction: column;
+  }
+
+  .detail-image {
+    display:block;
+    margin:0 auto;
+  }
+
+  .product-description {
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .cart{
+    justify-content: space-between;
+  }
+
+  .add-to-cart {
+    margin-right: 20px;
+  }
+
+  .add-to-cart-btn {
+    width:250px;
+  }
+
+  .price {
+    margin:0;
+    font-size: 2rem;
+  }
+
+  .rate {
+    margin-top:20px;
+  }
+
+  .sidebar {
+    width: 0;
+    height: 100vh; 
+    overflow: scroll;
+    position: fixed; 
+    top: 10; 
+    right: 0;
+    background-color: lightgray; 
+    transition: width 0.5s ease; 
+  }
+  
+  .sidebar.open-menu {
+    width: 100%;
+  }
+  
+  .right-side{
+    margin-right:10px;
+  }
+
+  .close, .icon{
+    width:40px;
+  }
+
+  .cart-image img{
+    width: 50%;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .cart-item{
+    margin: 0 auto;
+  }
+
+  .favorite-list li,.cart-list li {
+    flex-direction: column;
+  }
+
+  .item-title {
+    text-align: center;
+  }
+
+  .cart-list,.favorite-list {
+    margin-right:30px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .quantity-controls{
+    width: 80%;
+    /* display:block; */
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .quantity {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .item-price{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top:20px !important;
+    margin-bottom:20px !important;
+  }
+
+  .decrement-btn, .increment-btn {
+    width: 50px;
+  }
+
+  .total-price{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  
+  .delete-btn, .check-out{
+    width:80%;
+    display:block;
+    margin: 0 auto;
+  }
+  
+
+  button{
+    height: 40px;
+  }
+}
